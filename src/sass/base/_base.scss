@@ -8,6 +8,12 @@
 
 html {
   font-size: 62.5%;
+  @media screen and (max-width: $bp-tab-land) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: $bp-tab-port) {
+    font-size: 37.5%;
+  }
 }
 
 body {
