@@ -24,11 +24,8 @@ export function recipeAnimation(parentEl) {
 export function sidebarAnimation(renderStatus) {
   const sidebar = document.querySelector(".sidebar");
   if (renderStatus || window.innerWidth >= 1200) {
-    console.log(true, "75em");
     sidebar.classList.remove("mob-sidebar");
   } else {
     sidebar.classList.add("mob-sidebar");
   }
 }
-
-console.log("animations");
