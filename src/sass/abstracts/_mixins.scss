@@ -1,0 +1,22 @@
+@mixin flex-list($itemMargin) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > li:first-of-type {
+    margin-right: $itemMargin;
+  }
+}
+
+@mixin overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+@mixin transition($trans) {
+  transition: all #{$trans}s ease;
+}

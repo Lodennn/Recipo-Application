@@ -1,0 +1,18 @@
+.cook {
+  font-size: 1.6rem;
+  padding: 10rem 0 7rem;
+  & > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__text {
+    width: 50rem;
+    line-height: 1.7;
+  }
+  &__btn {
+    color: $color-white !important;
+  }
+}

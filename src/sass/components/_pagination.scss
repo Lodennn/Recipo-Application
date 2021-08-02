@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0 2rem 2rem 2rem;
+  & span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  &--left {
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+  & &--page {
+    font-size: 1.2rem;
+    cursor: initial;
+  }
+  &--right {
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}

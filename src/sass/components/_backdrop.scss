@@ -1,0 +1,9 @@
+.backdrop {
+  @include overlays;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1rem);
+  @media screen and (max-width: $bp-tab-port) {
+    min-height: 100vh;
+  }
+}

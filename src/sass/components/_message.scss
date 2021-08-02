@@ -1,0 +1,10 @@
+.message,
+.error {
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  p.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

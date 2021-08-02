@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: $bp-tab-port) {
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  & > &__list {
+    @include flex-list(4rem);
+    font-size: 1.5rem;
+  }
+  &__item {
+    &--bookmark {
+      position: relative;
+      &:hover .bookmarks {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+  &__link {
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}

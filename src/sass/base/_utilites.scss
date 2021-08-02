@@ -1,0 +1,39 @@
+.img-fluid {
+  max-width: 100%;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.flex-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li:first-of-type {
+    margin-right: 2rem;
+  }
+}
+
+.mt-sm {
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+
+.centered {
+  text-align: center;
+}

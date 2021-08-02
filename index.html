@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/sass/all.min.css" />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="src/js/controller.js"></script>
+    <title>Recipo</title>
+  </head>
+  <body class="container">
+    <!-- Add Recipe Modal -->
+    <div class="backdrop hidden"></div>
+    <div class="modal hidden">
+      <form class="recipe-form">
+        <div class="recipe-form__wrapper">
+          <div class="recipe-form__main-data">
+            <h4 class="recipe-form__label">Recipe Data</h4>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='title' placeholder="Recipe Name" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='publisher' placeholder="Publisher" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='image_url' placeholder="Image URL" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="number" name='cooking_time' min='15' step="1" placeholder="Cooking Time" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="number" name='servings'  min='1' step="1" placeholder="Number of servings" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='source_url' placeholder="Recipe URL" required >
+            </div>
+          </div>
+          <div class="recipe-form__ingredients-data">
+            <h4 class="recipe-form__label">Ingredients</h4>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-1'  placeholder="Ingredient 1 - (quantity, unit, description)" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-2'  placeholder="Ingredient 2 - (quantity, unit, description)" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-3'  placeholder="Ingredient 3 - (quantity, unit, description)" required >
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-4' placeholder="Ingredient 4 - (quantity, unit, description)">
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-5'  placeholder="Ingredient 5 - (quantity, unit, description)">
+            </div>
+            <div class='form__control'>
+              <input class='form__input' type="text" name='ingredient-6'  placeholder="Ingredient 6 - (quantity, unit, description)">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary recipe-form__btn">Add Recipe</button>
+      </form>
+    </div>
+    <!-- Add Recipe Modal -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="preview__recipe-list list-unstyled">
+        <div class="message">
+          <p class="centered">Search for some recipes</p>
+        </div>
+        <!-- Recipe Item -->
+        <!-- <li class="preview__recipe-item">
+          <a href="#" class="preview__recipe-link">
+            <figure class="preview__recipe-image">
+              <img
+                src="src/assets/recipes/rec1.jpg"
+                alt="preview__Recipe"
+                class="img-fluid preview__recipe-img"
+              />
+            </figure>
+            <h3 class="preview__recipe-name">LOBSTER PASTA</h3>
+            <p class="preview__recipe-desc">101 Cookbooks</p>
+          </a>
+        </li> -->
+        <!-- Recipe Item -->
+      </ul>
+      <div class="pagination">
+        <!-- <span class="pagination--left">
+          <span>&larr;</span> Previous Page</span
+        >
+        <span class="pagination--page">Page 1</span>
+        <span class="pagination--right"
+          >Next Page <span>&rarr;</span></span
+        > -->
+      </div>
+    </div>
+    <!-- Sidebar -->
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Nav -->
+      <nav class="nav">
+        <div class="logo">Recipo</div>
+        <form action="" class="search">
+          <input type="search" class="search__input" placeholder="Search for recipe"/>
+        </form>
+        <ul class="nav__list list-unstyled">
+          <li class="nav__item nav__item--add-recipe">
+            <a href="#" class="nav__link">
+              <i class="fa fa-hand-holding-medical"></i>
+              <span>New Recipe</span>
+            </a>
+          </li>
+          <li class="nav__item nav__item--bookmark">
+            <a href="#" class="nav__link">
+              <i class="fa fa-bookmark"></i>
+              <span>Bookmarks</span>
+            </a>
+            <div class="bookmarks">
+              <div class="scrollbar"></div>
+              <ul class="preview__recipe-list list-unstyled">
+                <div class="message">
+                  <p class="centered">No bookmarks yet ! 😊</p>
+                </div>
+                <!-- <p class='centered'>😊 No Data yet</p> -->
+                <!-- Recipe Item -->
+                <!-- <li class="preview__recipe-item">
+                  <a href="#" class="preview__recipe-link">
+                    <figure class="preview__recipe-image">
+                      <img
+                        src="src/assets/recipes/rec1.jpg"
+                        alt="preview__Recipe"
+                        class="img-fluid preview__recipe-img"
+                      />
+                    </figure>
+                    <h3 class="preview__recipe-name">LOBSTER PASTA</h3>
+                    <p class="preview__recipe-desc">101 Cookbooks</p>
+                  </a>
+                </li> -->
+                <!-- Recipe Item -->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Nav -->
+
+      <!-- Recipe -->
+      <div class="recipe recipe--data">
+        <div class="message">
+          <p class="centered">Select a recipe</p>
+        </div>
+        <!-- Recipe Image -->
+        <!-- <div class="recipe-image">
+          <div class="recipe-image--img">
+            <img src="src/assets/recipe.jpg" alt="" class="img-fluid" />
+          </div>
+          <img
+            src="src/assets/square.svg"
+            alt=""
+            class="recipe-image--square"
+          />
+          <div class="recipe-image--circle"></div>
+        </div> -->
+        <!-- Recipe Image -->
+        <!-- Recipe Info-->
+        <!-- <div class="recipe__info">
+          <div class="recipe__intro">
+            <h2 class="recipe__intro-title heading-2">Caesar Salad</h2>
+            <p class="recipe__intro-producer">
+              brought to you by
+              <span class="recipe__intro-producer--name">Zyad Naser</span>
+            </p>
+            <div class="recipe__intro-controls">
+              <button type="button" class="recipe__intro-controls--bookmark">
+                <i class="fa fa-bookmark"></i>
+              </button>
+              <div class="recipe__intro-controls--servings">
+                <button type="button" class="fa fa-minus"></button>
+                <span>Servings 4</span>
+                <button type="button" class="fa fa-plus"></button>
+              </div>
+            </div>
+            <div class="recipe__intro-data">
+              <div class="recipe__intro-data--item">
+                <i class="fa fa-clock"></i> <span>45</span>
+              </div>
+              <div class="recipe__intro-data--item">
+                <i class="fa fa-user"></i> <span>4</span>
+              </div>
+            </div>
+          </div> -->
+          <!-- Recipe Ingredients -->
+          <!-- <div class="recipe recipe--ingredients">
+            <div class="recipe__ing">
+              <h3 class="recipe-title recipe-title--ingredients heading-3">
+                Recipe Ingredients
+              </h3>
+              <div class="recipe__ingredients">
+                <ul class="recipe__ingredients--list list-unstyled">
+                  <li class="recipe__ingredients--item">
+                    1 large or 2 small heads of romaine lettuce
+                  </li>
+                  <li class="recipe__ingredients--item">Parmesan cheese</li>
+                  <li class="recipe__ingredients--item">2 Crisp croutons</li>
+                  <li class="recipe__ingredients--item">
+                    1 cup shelled raw peanuts
+                  </li>
+                  <li class="recipe__ingredients--item">Oil, or as needed</li>
+                  <li class="recipe__ingredients--item">Salt to taste</li>
+                  <li class="recipe__ingredients--item">
+                    1 large or 2 small heads of romaine lettuce
+                  </li>
+                  <li class="recipe__ingredients--item">Parmesan cheese</li>
+                  <li class="recipe__ingredients--item">2 Crisp croutons</li>
+                  <li class="recipe__ingredients--item">
+                    1 cup shelled raw peanuts
+                  </li>
+                  <li class="recipe__ingredients--item">Oil, or as needed</li>
+                  <li class="recipe__ingredients--item">Salt to taste</li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+          <!-- Recipe Ingredients -->
+          <!-- Cook it-->
+          <!-- <div class="cook">
+            <h4 class="cook__title">How to cook it ?</h4>
+            <p class="cook__text">
+              This recipe was carefully designed and tested by The Pioneer
+              Woman. Please check out directions at their website.
+            </p>
+            <a href="#" class="btn btn--primary mt-sm">Visit</a>
+          </div> -->
+          <!-- Cook it-->
+        <!-- </div> -->
+        <!-- Recipe Info-->
+      <!-- </div> -->
+      <!-- Recipe -->
+    </div>
+    <!-- Content -->
+  </body>
+</html>

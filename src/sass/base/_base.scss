@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns:
+    [sidebar-start] 30rem [sidebar-end gutter-start] 1fr [content-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [content-end] 1fr [gutter-end];
+  @media screen and (max-width: $bp-tab-land) {
+    grid-template-columns:
+      [gutter-start] 1fr [content-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [content-end] 1fr [gutter-end];
+  }
+  color: $color-gray-dark;
+  grid-template-rows: minmax(max-content, 100vh);
+  // background-color: $color-primary;
+  font-family: $font-primary;
+}
+
+a,
+a:link,
+a:visited {
+  color: $color-gray-dark-2;
+  text-decoration: none;
+}
+
+.content {
+  // background: url("../assets/texture.svg") center center no-repeat;
+  background: $color-gray-light;
+  min-height: 100vh;
+  background-size: cover;
+  grid-column: gutter-start/gutter-end;
+  padding-top: 5rem;
+  padding-inline: 8rem;
+  position: relative;
+  @media screen and (max-width: $bp-tab-land) {
+    grid-column: content-start/content-end;
+  }
+}

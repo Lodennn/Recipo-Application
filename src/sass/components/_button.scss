@@ -1,0 +1,11 @@
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: $color-white;
+  &--primary {
+    background: $color-secondary;
+  }
+}

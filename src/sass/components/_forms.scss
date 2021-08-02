@@ -1,0 +1,74 @@
+.recipe-form {
+  width: 100%;
+  min-height: 50%;
+  background: $color-white;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10rem $color-gray-light-2;
+  padding: 4rem 4rem;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  &__main-data,
+  &__ingredients-data {
+    flex-grow: 1;
+  }
+  &__main-data {
+    margin-right: 4rem;
+  }
+  &__btn {
+    margin: 5rem auto 0;
+    display: block;
+  }
+}
+
+.form {
+  &__control {
+    width: 100%;
+    &:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__input,
+  &__input--textarea {
+    width: 100%;
+    border-radius: 0.2rem;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light-2;
+    padding: 1rem;
+    color: $color-gray-dark;
+    &--textarea {
+      min-height: 10rem;
+      resize: none;
+    }
+    outline: {
+      color: $color-primary;
+    }
+    &:focus {
+      background-color: $color-primary-lighter;
+    }
+    &.invalid {
+      background-color: $color-danger-bg;
+      border: 1px solid $color-danger-border;
+    }
+    &::-webkit-input-placeholder {
+      color: $color-gray-light-3;
+    }
+  }
+}
+
+.search {
+  .search__input {
+    padding: 1rem 2rem;
+    min-width: 30rem;
+    border-radius: 100rem;
+    border: 1px solid $color-gray-light-2;
+    &:focus {
+      outline: none;
+    }
+  }
+}
