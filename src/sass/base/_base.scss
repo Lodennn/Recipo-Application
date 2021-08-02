@@ -57,6 +57,7 @@ a:visited {
   position: relative;
   @media screen and (max-width: $bp-tab-land) {
     grid-column: content-start/content-end;
-    padding-inline: 0rem;
+    // padding-inline: 0rem;
+    padding-inline: 4rem;
   }
 }
